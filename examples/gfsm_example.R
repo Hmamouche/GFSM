@@ -1,4 +1,4 @@
-# This file contains an application of the GFSM method on stock-and-watson-2012 macroeconomic dataset. We try to select predictors variables for each target variable (all variables) using different reduction size.
+# This file contains an application of the GFSM method on stock-and-watson-2012 macroeconomic dataset. We try to select predictors variables for each target variable (3 variables) using different reduction size.
 
 require(compiler)
 enableJIT(3)
