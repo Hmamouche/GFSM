@@ -1,9 +1,7 @@
+# This file contains an application of the GFSM method on stock-and-watson-2012 macroeconomic dataset. We try to select predictors variables for each target variable (all variables) using different reduction size.
+
 require(compiler)
 enableJIT(3)
-
-#library(tsDyn)
-#library(lmtest)
-#library(vars)
 library(parallel)
 
 source("examples/read_meta_data.R")
@@ -58,7 +56,7 @@ gfsm_selection <- function (data_dir){
     graph_dir = paste0("results/causality_graphs/",meta_data$data_name,"_","GrangerCausalityGraph.csv")
     matrix = read.table(graph_dir,check.names=FALSE, header = TRUE,row.names = 1, dec = '.',sep=";", comment.char = "#")
     
-    ############# Execute the method  for each target variable
+    # Execute the method  for each target variable
     for (target_name in meta_data$target_names){
         for(j in 1:length(colnames))
             if (colnames[j] == target_name) {
@@ -89,10 +87,11 @@ if (!file.exists ("results/causality_graphs"))
 data_dir = args[1]
 
 # First, we compute the graph of causalities
+# If the graph exists already in the "results/causality_graphs" directory, then this instruction is not necessary
 source("src/causality_graph.R")
-#compute_causality_graph (data_dir)
+compute_causality_graph (data_dir)
 
-# Then, we apply the GFSM method
+# One we have the graoh, we can then apply the GFSM method
 source("src/GSM.R")
 gfsm_selection (data_dir)
 

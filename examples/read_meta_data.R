@@ -1,3 +1,5 @@
+# This file contains some useful functions to read metadata from csv files
+
 ## eliminating space from a string
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 
