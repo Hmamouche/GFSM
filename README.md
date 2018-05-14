@@ -1,5 +1,5 @@
 # A Causality Based Feature Selection Approche for Multivariate Time Series Forecasting
-Implementation of the GFSM method: 
+Implementation of the GFSM (Granger causality Featur Selection Method): 
     
 Hmamouche, Y.; Casali, A.; Lakhal, L. Causality based feature selection approach for multivariate time series forecasting. In Proceedings of the International Conference on Advances in Databases, Knowledge, and Data Applications, Barcelona, Spain, 21–25 May 2017
 
@@ -16,4 +16,4 @@ The provided example (selecting predictors for variables of stock-and-watson-201
     sh main.sh
 
 # Authors
-* Youusef Hmamouche
+* Youssef Hmamouche
