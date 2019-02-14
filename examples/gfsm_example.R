@@ -88,8 +88,9 @@ data_dir = args[1]
 
 # First, we compute the graph of causalities
 # If the graph exists already in the "results/causality_graphs" directory, then this instruction is not necessary
+
 source("src/causality_graph.R")
-#compute_causality_graph (data_dir)
+compute_causality_graph (data_dir)
 
 # Then, we can then apply the GFSM method
 source("src/gfsm.R")

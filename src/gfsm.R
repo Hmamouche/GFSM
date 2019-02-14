@@ -53,6 +53,17 @@ gfsm <- function (F,gmat, targetIndex,threshold = 0.9, clus = FALSE, nbre_vars) 
     gmat = gmat[-delet, -delet]
     F = F[,-delet]
   } 
+
+  	if (ncol (gmat)  == 1){
+		print ("All variables are eliminated, try to reduce the threshold value")
+		return (0)
+	}
+
+	if (ncol (gmat)  == 2){
+		#  one variable that remains
+			return (F[, -target])
+	}
+
   x = gmat[-target, -target]
   
   ## determine the optimal number of cluster in case of clus = TRUE
