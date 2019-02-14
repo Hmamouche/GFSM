@@ -10,7 +10,9 @@ After installing R, these packages can be installed manually from http://cran.us
     Rscript requirements.R
     
     
-# Executing the example
+# An example
+The code of the GFSM algorithm is located in src/gfsm.R. But it requires the causality matrix of the multivariate time series.
+Thus, another script for computing matrix is src/in causality_graph.R.
 The provided example (selecting predictors for variables of stock-and-watson-2012 datasets) can be executed as follows:
     
     sh main.sh
