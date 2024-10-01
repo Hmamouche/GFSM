@@ -16,6 +16,3 @@ Thus, another script for computing this matrix is in src/causality_graph.R.
 We provide an example two execute these two steps  for selecting predictors for variables of stock-and-watson-2012 datasets. The example can be executed as follows:
     
     sh main.sh
-
-# Authors
-* Youssef Hmamouche
